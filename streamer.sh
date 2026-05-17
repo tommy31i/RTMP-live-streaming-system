@@ -20,5 +20,3 @@ ffmpeg -re -i "$FILE" \
   -r 30 -g 60 -keyint_min 60 -b:v 4500k -maxrate 5000k -bufsize 10000k \
   -c:a aac -b:a 160k -ar 48000 -ac 2 \
   -f tee "[f=flv]${URL_PRIMARY%/}/$YT_KEY|[f=flv]${URL_BACKUP%/}/$YT_KEY"
-
-# コメント
